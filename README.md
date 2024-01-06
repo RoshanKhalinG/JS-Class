@@ -1,1 +1,1 @@
-# JS-Class
+# wpm
