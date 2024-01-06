@@ -7,11 +7,60 @@
     --quotecol: rgb(34, 139, 34); /* Change quote color */
     --restartBtn: rgb(0, 123, 255); /* Change restart button color */
     --timemode: rgb(255, 193, 7); /* Change time mode color */
-    --timer: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%); /* Change timer gradient */
+    --timer:rgb(71, 171, 113);
+    /* --timer: linear-gradient(90deg, rgba(40, 150, 89) 0%, rgba(0, 255, 0, 1) 100%); Change timer gradient */
     --errorCol: rgb(255, 99, 71); /* Change error color */
     --accuracy: rgb(173, 216, 230); /* Change accuracy color */
 }
 
+:root.theme-dark {
+    --bg-color: rgb(15, 52, 75); 
+    --font-color: #f0f0f0;
+}
+
+:root.theme-light {
+    /* --bg-color: #ffffff;
+    --font-color: #333333; */ 
+    --bg-color: linear-gradient(45deg,#405de6,#4138f5,#833ab4,#c13584,#e1306c,#Fd1ddd);
+    /* --bg-color: rgb(255, 223, 223);  */
+    --font-color: rgb(33, 33, 33); 
+}
+
+.container1{
+    flex-direction: column;
+    align-items: center;
+}
+.limit{
+    align-items: center;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .limit a{
+    cursor: pointer;
+  }
+  .limit a:hover{
+    color: #ee4e81;
+  }
+
+.limit{
+    color: white;
+  }
+  
+/* [data-theme="light"] {
+   
+    --font-color: #222;
+    --inputarea:rgb(52, 46, 59);
+    --headingcolor:rgb(255, 255, 255);
+    --incorectchar:rgb(240, 94, 143);
+    --quotecol: rgb(223, 153, 186);
+    --restartBtn: rgb(233, 104, 136);
+    --timemode:rgb(78, 4, 29);
+    --timer:linear-gradient(90deg, rgb(240, 70, 127) 0%, rgb(237, 115, 151) 100%);
+    --errorCol: rgb(235, 96, 138);
+    --accuracy:rgb(40, 150, 89);
+  } */
 
 body {
     background-color:var(--bg-color);
@@ -32,6 +81,105 @@ body {
     font-family: cursive;
     /* font-family: 'Flamenco', cursive; */
 }
+
+
+/*Slider for dark and light*/
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+  }
+  .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #2a2c2d;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .container h1 {
+    color: var(--font-color);
+    font-family: sans-serif;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: rgb(0, 0, 0) url("https://i.ibb.co/FxzBYR9/night.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
 .timer
 {

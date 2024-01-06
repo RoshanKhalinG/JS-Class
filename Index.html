@@ -11,7 +11,19 @@
     <section id="Container">
         
             <div class="header">TYPING SPEED TEST</div>
-            <div class="head">
+       <!-- Slider For Dark and Light -->
+
+            <div class="contain">
+                <label id="switch" class="switch">
+                  <input type="checkbox" onchange="toggleTheme()" id="slider" />
+                  <span class="slider round"></span>
+                </label>
+            </div>
+    </section>
+
+         
+  <section id="container1">   
+     <div class="head">
                 <div class="wpm">
                     <div class="header_text">WPM</div>
                     <div class="c_time">100</div>
@@ -35,6 +47,16 @@
                     <div class="curr_errors">0</div>
                  </div> 
              </div>
-    </section>
+
+             <div class="limit">
+                <a id="fifteen" onclick="setTimeLimit(15)">15s</a>
+                <a id="thirty" onclick="setTimeLimit(30)">30s</a>
+                <a id="sixty" onclick="setTimeLimit(60)">60s</a>
+                <a id="twomin" onclick="setTimeLimit(120)">120s</a>
+             </div>
+</section>
+        
+    
 </body>
+<script src="app.js"></script>
 </html>
