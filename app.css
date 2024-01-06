@@ -1,0 +1,94 @@
+:root {
+    --bg-color: rgb(15, 52, 75); /* Change background color */
+    --font-color: #f0f0f0; /* Change font color */
+    --inputarea: rgb(112, 128, 144); /* Change input area color */
+    --headercolor: rgb(255, 200, 87); /* Change heading color */
+    --incorectchar: rgb(255, 69, 0); /* Change incorrect character color */
+    --quotecol: rgb(34, 139, 34); /* Change quote color */
+    --restartBtn: rgb(0, 123, 255); /* Change restart button color */
+    --timemode: rgb(255, 193, 7); /* Change time mode color */
+    --timer: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%); /* Change timer gradient */
+    --errorCol: rgb(255, 99, 71); /* Change error color */
+    --accuracy: rgb(173, 216, 230); /* Change accuracy color */
+}
+
+
+body {
+    background-color:var(--bg-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--headercolor);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: cursive;
+    /* font-family: 'Flamenco', cursive; */
+}
+
+.timer
+{
+
+  background: var(--timer);
+  height: 70px;
+  width: 80px;
+  margin: 8px;
+  padding: 13px 6px;
+  border-radius: 5px;
+  color:white;
+}
+.cpm{
+    background: rgb(71, 106, 171);
+    height: 70px;
+    width: 70px;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    color:white;
+  }
+  .wpm{
+    background: rgb(137, 31, 163);
+    height: 70px;
+    width: 70px;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    color:white;
+  }
+  .accuracy{
+    background: var(--accuracy);
+    height: 70px;
+    width: 80px;
+    margin: 8px;
+    padding: 13px 6px;
+    border-radius: 5px;
+    color:white;
+  }
+.errors{
+        background:var(--errorCol);
+        height: 70px;
+        width: 80px;
+        margin: 8px;
+        padding: 13px 6px;
+        border-radius: 5px;
+        color:white;
+      }
+
+.header_text {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+
+  .curr_time, .curr_errors,
+  .curr_accuracy, .curr_cpm,
+  .curr_wpm {
+    font-size: 2.75rem;
+  }
