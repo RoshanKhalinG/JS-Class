@@ -1,16 +1,16 @@
 :root {
-    --bg-color: rgb(15, 52, 75); /* Change background color */
-    --font-color: #f0f0f0; /* Change font color */
-    --inputarea: rgb(112, 128, 144); /* Change input area color */
-    --headercolor: rgb(255, 200, 87); /* Change heading color */
-    --incorectchar: rgb(255, 69, 0); /* Change incorrect character color */
-    --quotecol: rgb(34, 139, 34); /* Change quote color */
-    --restartBtn: rgb(0, 123, 255); /* Change restart button color */
-    --timemode: rgb(255, 193, 7); /* Change time mode color */
+    --bg-color: rgb(15, 52, 75); 
+    --font-color: #f0f0f0;
+    --inputarea: rgb(112, 128, 144);
+    --headercolor: rgb(255, 200, 87);
+    --incorectchar: rgb(255, 69, 0);
+    --quotecol: rgb(34, 139, 34);
+    --restartBtn: rgb(0, 123, 255);
+    --timemode: rgb(255, 193, 7); 
     --timer:rgb(71, 171, 113);
-    /* --timer: linear-gradient(90deg, rgba(40, 150, 89) 0%, rgba(0, 255, 0, 1) 100%); Change timer gradient */
-    --errorCol: rgb(255, 99, 71); /* Change error color */
-    --accuracy: rgb(173, 216, 230); /* Change accuracy color */
+    
+    --errorCol: rgb(255, 99, 71); 
+    --accuracy: rgb(173, 216, 230);
 }
 
 :root.theme-dark {
@@ -24,6 +24,8 @@
     --bg-color: linear-gradient(45deg,#405de6,#4138f5,#833ab4,#c13584,#e1306c,#Fd1ddd);
     /* --bg-color: rgb(255, 223, 223);  */
     --font-color: rgb(33, 33, 33); 
+    --headercolor:#Fd1ddd;
+    
 }
 
 .container1{
