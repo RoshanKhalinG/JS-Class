@@ -29,7 +29,23 @@
         <a id="sixty" onclick="setTimeLimit(60)">60s</a>
         <a id="twomin" onclick="setTimeLimit(120)">120s</a>
    </div>
-    
+   
+   <div class="quote">Click on the input area to start the game.</div>
+   <p style="color:snow;">
+      <span style="color:pink;text-transform:uppercase;" id="local"></span> 
+      <label id="lastwpm"></label>
+   </p>
+   
+   <div class="dropdown">
+    <button id = "firstrow" class="dropbtn">Choose Level</button>
+    <div class="dropdown-content">
+       <a onclick="setGameDifficulty('Easy')"><b>Easy</b></a>
+       <a onclick="setGameDifficulty('Medium')"><b>Medium</b></a>
+       <a onclick="setGameDifficulty('Hard')"><b>Hard</b></a>
+       <a onclick="setGameDifficulty('Ultrahard')"><b>Ultra Hard</b></a>
+    </div>
+ </div>
+
      <div class="head">
                 <div class="wpm">
                     <div class="header_text">WPM</div>
