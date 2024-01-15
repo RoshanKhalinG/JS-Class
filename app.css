@@ -75,7 +75,7 @@
     height: 100vh; /* Set the height of the container to 100% of the viewport height 
 } */
 .quote {
-  text-align: center;
+
   border:2px dotted var(--quotecol);
   font-size: 1.5rem;
 
@@ -146,6 +146,35 @@ display: flex;} */
 
 .dropdown:hover .dropbtn {
   background-color: #e4426a;
+}
+
+
+.input_area {
+  background-color: var(--inputarea);
+  border: 0;
+  margin-top: 10px;
+  width: 60%;
+  font-size: 18px;
+  padding: 26px;
+  color: white;
+  outline: 0;
+ 
+}
+
+.restart_btn {
+  background-color:var(--restartBtn);
+  border: none;
+  color:white;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 15px 28px;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: 300ms ease;
+}
+
+.restart_btn:hover{
+  background-color: rgb(138, 62, 209);
 }
 /* [data-theme="light"] {
    
