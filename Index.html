@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <section id="Container">
+    <div id="Container">
         
             <div class="header">TYPING SPEED TEST</div>
        <!-- Slider For Dark and Light -->
@@ -19,18 +19,20 @@
                   <span class="slider round"></span>
                 </label>
             </div>
-    </section>
+            <div class="limit">
+                <a id="fifteen" onclick="setTimeLimit(15)">15s</a>
+                <a id="thirty" onclick="setTimeLimit(30)">30s</a>
+                <a id="sixty" onclick="setTimeLimit(60)">60s</a>
+                <a id="twomin" onclick="setTimeLimit(120)">120s</a>
+           </div>
+    </div>
 
          
-  <section id="container1"> 
-    <div class="limit">
-        <a id="fifteen" onclick="setTimeLimit(15)">15s</a>
-        <a id="thirty" onclick="setTimeLimit(30)">30s</a>
-        <a id="sixty" onclick="setTimeLimit(60)">60s</a>
-        <a id="twomin" onclick="setTimeLimit(120)">120s</a>
-   </div>
-   
-   <div class="quote">Click on the input area to start the game.</div>
+  <div id="container1"> 
+ 
+   <div class="parts">
+    <div class="qu">  <div class="quote">Click on the input area to start the game.</div></div>
+ 
    <p style="color:snow;">
       <span style="color:pink;text-transform:uppercase;" id="local"></span> 
       <label id="lastwpm"></label>
@@ -75,8 +77,8 @@
              onfocus="startGame()"></textarea>
           <button class="restart_btn" onclick="resetValues()">Restart</button>
 
-</section>
-        
+            </div>
+        </div>
     
 </body>
 <script src="app.js"></script>

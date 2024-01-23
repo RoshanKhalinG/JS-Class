@@ -46,7 +46,9 @@
   .limit a:hover{
     color: #ee4e81;
   } */
-
+/* #container1{
+  display: flex;
+} */
   #container1 .limit {
     display: flex;
     justify-content: center;
@@ -74,12 +76,15 @@
     justify-content: center;
     height: 100vh; /* Set the height of the container to 100% of the viewport height 
 } */
-.quote {
 
+.qu{
+padding-left: 530px;
+}
+.quote {
   border:2px dotted var(--quotecol);
   font-size: 1.5rem;
-
   max-width: 40%;
+  padding-left: 200px;
   margin: 10px;
   padding: 25px;
   color: snow;
