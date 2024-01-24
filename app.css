@@ -49,23 +49,32 @@
 /* #container1{
   display: flex;
 } */
-  #container1 .limit {
+
+#content-wrapper {
+  display: flex;
+}
+
+#container1 {
+  padding-left: 200px;/* Adjust the margin as needed */
+}
+
+   .limit {
     display: flex;
     justify-content: center;
     gap: 20px; /* Adjust the gap value as needed */
 }
 
-#container1 .limit a {
+ .limit a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 30px 30px;
     /* border: 1px solid #333;
     border-radius: 5px; */
     cursor: pointer;
 }
 
-#container1 .limit a:hover {
+ .limit a:hover {
   color: #ee4e81;
 
 }
@@ -83,8 +92,8 @@ padding-left: 530px;
 .quote {
   border:2px dotted var(--quotecol);
   font-size: 1.5rem;
-  max-width: 40%;
-  padding-left: 200px;
+  max-width: 100%;
+  padding-left: 100px;
   margin: 10px;
   padding: 25px;
   color: snow;
