@@ -19,12 +19,7 @@
                   <span class="slider round"></span>
                 </label>
             </div>
-            <div class="limit">
-                <a id="fifteen" onclick="setTimeLimit(15)">15s</a>
-                <a id="thirty" onclick="setTimeLimit(30)">30s</a>
-                <a id="sixty" onclick="setTimeLimit(60)">60s</a>
-                <a id="twomin" onclick="setTimeLimit(120)">120s</a>
-           </div>
+
     </div>
 
     <div id="content-wrapper">
@@ -55,15 +50,19 @@
              </div> 
 </div>
         <div id="container1"> 
-     
-         <div class="parts">
-          <div class="qu">  <div class="quote">Click on the input area to start the game.</div></div>
+            <div class="limit">
+                <a id="fifteen" onclick="setTimeLimit(15)">15s</a>
+                <a id="thirty" onclick="setTimeLimit(30)">30s</a>
+                <a id="sixty" onclick="setTimeLimit(60)">60s</a>
+                <a id="twomin" onclick="setTimeLimit(120)">120s</a>
+           </div>
+          <div class="qu"><div class="quote">Click on the input area to start the game.</div></div>
        
-         <p style="color:snow;">
+         <!-- <p style="color:snow;">
             <span style="color:pink;text-transform:uppercase;" id="local"></span> 
             <label id="lastwpm"></label>
          </p>
-         
+          -->
          <div class="dropdown">
             <button id="firstrow" class="dropbtn">Choose Level</button>
             <div class="dropdown-content">
@@ -83,12 +82,12 @@
         </div>
      
 
-     
-     
-                </div>
             </div>
         </div>
-    </div>
+        <!-- Footer -->
+        <p style="color:snow">Designed by 
+            <a class ="footer" target=”_blank”  href=""> Roshan Rai</a>
+          </p>
 </body>
 <script src="app.js"></script>
 <script src="theme.js"></script>

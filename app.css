@@ -55,10 +55,11 @@
 }
 
 #container1 {
-  padding-left: 200px;/* Adjust the margin as needed */
+  /* padding-left: 410px; */
 }
 
    .limit {
+    padding-left: 440px;
     display: flex;
     justify-content: center;
     gap: 20px; /* Adjust the gap value as needed */
@@ -87,13 +88,13 @@
 } */
 
 .qu{
-padding-left: 530px;
+padding-left: 430px;
+
 }
 .quote {
   border:2px dotted var(--quotecol);
   font-size: 1.5rem;
   max-width: 100%;
-  padding-left: 100px;
   margin: 10px;
   padding: 25px;
   color: snow;
@@ -127,6 +128,7 @@ display: flex;} */
 .dropdown {
   position: relative;
   display: inline-block;
+ padding-left: 400px;
 }
 
 .dropdown-content {
@@ -162,19 +164,22 @@ display: flex;} */
   background-color: #e4426a;
 }
 
-
+.text{
+  padding-left: 200px;
+}
 .input_area {
   background-color: var(--inputarea);
   border: 0;
   margin-top: 10px;
-  width: 60%;
+  width: 130%;
   font-size: 18px;
   padding: 26px;
   color: white;
   outline: 0;
- 
 }
-
+.butt{
+  padding-left: 430px;
+}
 .restart_btn {
   background-color:var(--restartBtn);
   border: none;
@@ -381,4 +386,14 @@ body {
   .curr_accuracy, .curr_cpm,
   .curr_wpm {
     font-size: 2.75rem;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  .footer{
+    color: pink;
+  }
+  .footer:hover{
+    color:#ee4e81
   }
