@@ -54,9 +54,7 @@
   display: flex;
 }
 
-#container1 {
-  /* padding-left: 410px; */
-}
+
 
    .limit {
     padding-left: 440px;
@@ -98,22 +96,7 @@ padding-left: 430px;
   margin: 10px;
   padding: 25px;
   color: snow;
-  
 }
-
-
-
-
-/* .quote {
-  border:2px dotted var(--quotecol);
-  font-size: 1.5rem;
-  margin: 10px;
-  padding: 25px;
-  max-width:50%;
-  color: snow;
-display: flex;} */
-  
-
 
 .dropbtn {
   background-color: #ee4e81;
@@ -128,7 +111,7 @@ display: flex;} */
 .dropdown {
   position: relative;
   display: inline-block;
- padding-left: 400px;
+  /* padding-left: 430px; */
 }
 
 .dropdown-content {
@@ -164,6 +147,7 @@ display: flex;} */
   background-color: #e4426a;
 }
 
+
 .text{
   padding-left: 200px;
 }
@@ -195,19 +179,7 @@ display: flex;} */
 .restart_btn:hover{
   background-color: rgb(138, 62, 209);
 }
-/* [data-theme="light"] {
-   
-    --font-color: #222;
-    --inputarea:rgb(52, 46, 59);
-    --headingcolor:rgb(255, 255, 255);
-    --incorectchar:rgb(240, 94, 143);
-    --quotecol: rgb(223, 153, 186);
-    --restartBtn: rgb(233, 104, 136);
-    --timemode:rgb(78, 4, 29);
-    --timer:linear-gradient(90deg, rgb(240, 70, 127) 0%, rgb(237, 115, 151) 100%);
-    --errorCol: rgb(235, 96, 138);
-    --accuracy:rgb(40, 150, 89);
-  } */
+
 
 body {
     background-color:var(--bg-color);
@@ -228,7 +200,6 @@ body {
     font-family: cursive;
     /* font-family: 'Flamenco', cursive; */
 }
-
 
 /*Slider for dark and light*/
 
@@ -397,3 +368,8 @@ body {
   .footer:hover{
     color:#ee4e81
   }
+
+  @media only screen and (max-width: 600px) {
+    .quote,.input_area{
+        width:90%;
+    }}
