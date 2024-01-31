@@ -1,78 +1,118 @@
-// Get references to HTML elements
-const local = document.getElementById("local");
-const timer_text = document.querySelector(".curr_time");
-const first_row = document.getElementById("firstrow");
-const level = document.getElementById("select");
+import quotes from './quotes.js'; // Import your quotes data
 
-// Time limit buttons
-const timeModes = {
-  15: document.getElementById("fifteen"),
-  30: document.getElementById("thirty"),
-  60: document.getElementById("sixty"),
-  120: document.getElementById("twomin"),
-};
+const textElement = document.querySelector('.input_area');
+const quoteElement = document.querySelector('.quote');
+const timerElement = document.querySelector('.curr_time');
+const wpmElement = document.querySelector('.curr_wpm');
+const cpmElement = document.querySelector('.curr_cpm');
+const accuracyElement = document.querySelector('.curr_accuracy');
+const errorsElement = document.querySelector('.curr_errors');
+const restartButton = document.querySelector('.restart_btn');
+const themeSwitch = document.getElementById('slider');
+const headerColor = document.querySelector('.header');
 
-// Current state of wpmtest
-const current = {
-  started: false,
-  username: localStorage.getItem("username"),
-  timeLimit: +localStorage.getItem("timelimit") || 60,
-  difficulty: localStorage.getItem("difficulty") || "Medium",
-};
+// Global variables
+let startTime;
+let elapsedTime = 0;
+let typedChars = 0;
+let correctChars = 0;
+let incorrectChars = 0;
+let isStarted = false;
+let isDarkMode = false; // Initialize darkness based on user preference
 
-function setTimeLimit(time) {
-  if (!Object.keys(timeModes).includes(`${time}`)) {
-    console.error(`Time limit ${time}s not available.`);
-    return;
+// Difficulty level (default: Normal)
+let difficulty = 'Normal';
+
+// Load saved theme, if any
+if (localStorage.getItem('theme')) {
+  isDarkMode = localStorage.getItem('theme') === 'theme-dark';
+  document.documentElement.classList.add(isDarkMode ? 'theme-dark' : 'theme-light');
+}
+
+// Event handlers
+
+// Theme toggle
+themeSwitch.addEventListener('click', () => {
+  isDarkMode = !isDarkMode;
+  document.documentElement.classList.toggle('theme-dark');
+  localStorage.setItem('theme', isDarkMode ? 'theme-dark' : 'theme-light');
+  if (isDarkMode) {
+    headerColor.style.color = '#Fd1ddd'; // Adjust header color for dark mode
+  } else {
+    headerColor.style.color = 'var(--headercolor)'; // Reset header color to default
   }
-  localStorage.setItem("timelimit", time);
-  current.timeLimit = localStorage.getItem("timelimit");
-
-  timer_text.innerText = current.timeLimit + "s";
-
-  for (t in timeModes) {
-    timeModes[t].style.color = t == time ? "var(--timemode)" : "white";
-  }
-}
-
-function setGameDifficulty(difficulty) {
-  localStorage.setItem("difficulty", difficulty);
-  current.difficulty = difficulty;
-  first_row.innerText = "Currently " + difficulty;
-}
-
-// Initializing
-setTimeLimit(current.timeLimit);
-setGameDifficulty(current.difficulty);
-
-if (!current.username) {
-  current.username = prompt("enter username");
-  localStorage.setItem("username", current.username);
-}
-local.innerText = current.username;
-
-// ...
-
-// Event listeners for time limit buttons
-timeModes[15].addEventListener("click", () => setTimeLimit(15));
-timeModes[30].addEventListener("click", () => setTimeLimit(30));
-timeModes[60].addEventListener("click", () => setTimeLimit(60));
-timeModes[120].addEventListener("click", () => setTimeLimit(120));
-
-// Event listener for the dropdown level button
-level.addEventListener("click", () => {
-  // Your logic for handling level selection goes here
 });
 
-// ...
+// Start typing event
+textElement.addEventListener('input', () => {
+  if (!isStarted) {
+    startTime = new Date();
+    isStarted = true;
+    updateTimer(); // Start timer
+  }
 
-// Event listener for the restart button
-document.querySelector(".restart_btn").addEventListener("click", () => resetValues());
+  // Calculate typed characters, correct/incorrect, and accuracy
+  const typedText = textElement.value;
+  const actualText = quoteElement.textContent;
+  const currentChar = typedText[typedChars];
 
-// Event listener for the start of the game
-document.querySelector(".input_area").addEventListener("focus", () => startGame());
+  typedChars++;
+  if (currentChar === actualText[typedChars - 1]) {
+    correctChars++;
+  } else {
+    incorrectChars++;
+  }
 
-// ...
+  // Update UI elements
+  wpmElement.textContent = Math.round(correctChars / (elapsedTime / 60000));
+  cpmElement.textContent = Math.round(typedChars / (elapsedTime / 60000));
+  accuracyElement.textContent = Math.round((correctChars / typedChars) * 100);
+  errorsElement.textContent = incorrectChars;
+});
 
-// Additional functions and logic can be added as needed
+// Restart button
+restartButton.addEventListener('click', () => {
+  resetGame();
+});
 
+// Timer function
+function updateTimer() {
+  elapsedTime = new Date() - startTime;
+  timerElement.textContent = formatTime(elapsedTime);
+
+  // Update timer every 100 milliseconds
+  if (isStarted) {
+    setTimeout(updateTimer, 100);
+  }
+}
+
+// Reset game
+function resetGame() {
+  isStarted = false;
+  startTime = null;
+  elapsedTime = 0;
+  typedChars = 0;
+  correctChars = 0;
+  incorrectChars = 0;
+  textElement.value = '';
+  quoteElement.textContent = getRandomQuote(difficulty); // Get a new quote
+  updateTimer();
+
+  // Reset UI elements
+  wpmElement.textContent = 0;
+  cpmElement.textContent = 0;
+  accuracyElement.textContent = 0;
+  errorsElement.textContent = 0;
+}
+
+// Get a random quote based on difficulty
+function getRandomQuote(difficulty) {
+  const quoteArray = quotes[difficulty]; // Use the correct difficulty array
+  const randomIndex = Math.floor(Math.random() * quoteArray.length);
+  return quoteArray[randomIndex];
+}
+
+// Format time in minutes and seconds
+function formatTime(timeInMs) {
+  const minutes = Math.floor(timeInMs / 60000);
+  const seconds = Math.floor((timeInMs %

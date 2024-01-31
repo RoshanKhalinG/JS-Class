@@ -9,7 +9,7 @@ const quotes = {
       "Do one thing every day that scares you.",
       "Failure is the condiment that gives success its flavor.",
       "Happiness is not something ready made. It comes from your own actions.",
-      "It's going to be hard, but hard does not mean impossible.",
+      "It's going to be hard, but hard does not mean Aimpossible.",
       "Smart people learn from everything and everyone, average people from their experiences, stupid people already have all the answers.",
       "Whatever you are, be a good one.",
       "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten."
