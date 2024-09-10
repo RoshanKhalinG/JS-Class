@@ -112,12 +112,13 @@ padding-left: 430px;
   position: relative;
   display: inline-block;
   /* padding-left: 430px; */
+  
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background: rgb(227,54,113);
+  /* background: rgb(227,54,113); */
   background: linear-gradient(90deg, rgba(227,54,113,1) 0%, rgba(237,119,115,1) 100%);
   min-width: 100%;
   color: rgb(238, 212, 212);
