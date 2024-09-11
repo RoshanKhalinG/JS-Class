@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WPM TEST</title>
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -63,15 +64,16 @@
             <label id="lastwpm"></label>
          </p>
          
-          <div class="dropdown">
-            <button id = "firstrow" class="dropbtn">Choose Level</button>
+         <div class="dropdown">
+            <button id="firstrow" class="dropbtn">Choose Level</button>
             <div class="dropdown-content">
-               <a onclick="setGameDifficulty('Easy')"><b>Easy</b></a>
-               <a onclick="setGameDifficulty('Medium')"><b>Medium</b></a>
-               <a onclick="setGameDifficulty('Hard')"><b>Hard</b></a>
-               <a onclick="setGameDifficulty('Ultrahard')"><b>Ultra Hard</b></a>
+                <a onclick="setDifficulty('Easy')"><b>Easy</b></a>
+                <a onclick="setDifficulty('Medium')"><b>Medium</b></a>
+                <a onclick="setDifficulty('Hard')"><b>Hard</b></a>
+                <a onclick="setDifficulty('Ultrahard')"><b>Ultra Hard</b></a>
             </div>
-         </div>
+        </div>
+        
      
          <div class="text">
          <textarea class="input_area" placeholder="Click me to start test..." oninput="processCurrentText()"
