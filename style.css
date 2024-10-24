@@ -53,17 +53,6 @@ h1 {
   font-size: 1.2em;
 }
 
-textarea {
-  width: 100%;
-  margin: 20px 0;
-}
-
-footer {
-  padding: 20px;
-  font-size: 0.8em;
-}
-
-
 
 body {
   background:var(--bg-color);
@@ -278,7 +267,7 @@ input:checked + .slider:before {
   background-color: var(--inputarea);
   border: 0;
   margin-top: 10px;
-  width: 60%;
+  width: 100%;
   font-size: 18px;
   padding: 26px;
   color: white;
